@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<conio.h>
+#include<alloc.h>
+#include "tree.h"
+ 
+void main()
+{
+int c=0,i;
+t *root=NULL;
+clrscr();
+while(c<=5)
+{
+printf("Enter your Choice:\n1.Create Tree\n2.Inorder Traversing\n3.Preorder Traversing\n4.Postorder Traversing\n5. Display");
+printf("\nEnter Your Choice:");
+scanf("%d",&c);
+if (c==1)
+{
+printf("Enter No");
+scanf("%d",&i);
+create(i,&root);
+}
+else if(c==2)
+{
+inorder(root);
+}
+else if(c==3)
+{
+preorder(root);
+}
+else if(c==4)
+{
+postorder(root);
+}
+else
+display(root);
+}
+getch();
+}
